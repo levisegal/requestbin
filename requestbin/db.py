@@ -15,6 +15,14 @@ except ImportError, e:
 
 db = klass(bin_ttl)
 
+def find_or_create(name):
+    name=re.split(r"[/.]", name)[0]
+    try:
+        bin=db.lookup_bin(name)
+        return bin
+    except KeyError:
+        return db.create_named_bin(name)
+
 def create_bin(private=False):
     return db.create_bin(private)
 

@@ -33,10 +33,8 @@ def home():
 
 @app.endpoint('views.bin')
 def bin(name):
-    try:
-        bin = db.lookup_bin(name)
-    except KeyError:
-        return "Not found\n", 404
+    bin = db.find_or_create(name)
+    
     if request.query_string == 'inspect':
         if bin.private and session.get(bin.name) != bin.secret_key:
             return "Private bin\n", 403
