@@ -1,4 +1,5 @@
-http://arcane-inlet-66659.herokuapp.com/
+https://shielded-retreat-58940.herokuapp.com/
+
 
 # [RequestBin](http://requestb.in)
 ## A Runscope community project.
@@ -16,7 +17,7 @@ Looking to self-host?
 ## Deploy your own instance using Heroku
 Create a Heroku account if you haven't, then grab the RequestBin source using git:
 
-`$ git clone git://github.com/Runscope/requestbin.git`
+`$ git clone git@github.com:levisegal/requestbin.git`
 
 From the project directory, create a Heroku application:
 
